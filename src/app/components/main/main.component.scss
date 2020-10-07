@@ -1,0 +1,52 @@
+.mainBox{
+  background-color: lightcyan;
+  display: flex;
+  flex-direction: row;
+  border: 5px solid black;
+}
+
+.mySpinner{
+  width: 9rem;
+  height: 9rem;
+}
+.spinnerBox{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.invScreen{
+  height: 100%;
+  width: 100%;
+  background-color: lightgrey;
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+  z-index: 10;
+}
+
+@media (max-width: 900px) {
+  .mainBox{
+    flex-direction: column;
+  }
+  app-list-component{
+    width: 100% !important;
+  }
+  app-information-component{
+    width: 100% !important;
+  }
+  app-flights-table-component{
+    width: 100% !important;
+  }
+}
+
+app-list-component{
+  width: 20%;
+}
+app-information-component{
+  width: 25%;
+}
+app-flights-table-component{
+  width: 55%;
+}

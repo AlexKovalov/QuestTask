@@ -1,0 +1,9 @@
+<div>
+  <h5 class="listTitle m-0">Workers</h5>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item clickView" data-toggle="list" role="tab"
+        *ngFor="let worker of workers; let i = index"
+        (click)="selectWorker(worker, i)"
+        [ngClass]="{active: activeIndex === i}">{{worker.name}}</li>
+  </ul>
+</div>

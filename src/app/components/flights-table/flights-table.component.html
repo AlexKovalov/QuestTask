@@ -1,0 +1,19 @@
+<div class="tableBox">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col" *ngFor="let title of COLUMNS_TITLE">{{title}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let flight of flights; let i = index"
+        [ngClass]="{activeTR: activeIndex === i}" (click)="selectFlight(flight, i)" class="clickView">
+      <td id="flightNumber">{{flight.num}}</td>
+      <td id="origin">{{flight.from}}</td>
+      <td id="originDate">{{flight.from_date}}</td>
+      <td id="destination">{{flight.to}}</td>
+      <td id="destinationDate">{{flight.to_date}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

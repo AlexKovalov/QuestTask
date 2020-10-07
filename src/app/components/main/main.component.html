@@ -1,0 +1,16 @@
+<div class="mainBox">
+  <app-list-component [workers]="workers" (selectedWorker)="loadFlights($event)"></app-list-component>
+  <app-flights-table-component [flights]="flights" (selectedFlight)="getInfo($event)"></app-flights-table-component>
+  <app-information-component [flight]="currentFlight"></app-information-component>
+</div>
+
+<div class="invScreen" *ngIf="isLoading">
+  <div class="spinnerBox">
+    <div class="spinner-border mySpinner" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+</div>
+
+
+
